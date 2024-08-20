@@ -1,0 +1,8 @@
+<h1>{{product.name}}</h1>
+<p>{{product.description}}</p>
+<p>{{product.price}}</p>
+<p><a [title]="product.name + ' details'" [routerLink]="['/products', product.id]">{{ product.name }}</a></p>
+<button type="button" (click)="shareProduct()">
+  Share
+</button>
+<app-alerts [product]="product" (notify)="onNotify()"></app-alerts>
